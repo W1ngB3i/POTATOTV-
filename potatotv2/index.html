@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 			<title>POTATOTV 服务器办赛-POTATOTV</title>
@@ -56,9 +52,22 @@
 									<li><a href="#two" class="button next scrolly">加入POTATOTV赛事交流群</a></li>
 								</ul>
 							</div>
-						</div>
-						
 					</section>
+					<script>
+						window.onload=function starttime(){
+								time(h1,'2023/1/13');   
+								ptimer = setTimeout(starttime,1000); 
+						}
+							function time(obj,futimg){
+								var nowtime = new Date().getTime(); 
+								var futruetime =  new Date(futimg).getTime(); 
+								var msec = nowtime-futruetime; 
+								var time = (msec/1000);  
+								var day = parseInt(time/86400); 
+								var hour = parseInt(time/3600)-24*day;    
+								obj.innerHTML="PotatoTV赛事已举办"+day+"天"
+						}
+						</script>
 
 				<!-- Main -->
 					<div id="main">
@@ -106,8 +115,8 @@
 										<img src="images/potatotvlogo.png" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="#" class="link">尽请期待</a></h3>
-										<p>Please wait</p>
+										<h3><a href="pic.html" class="link">我们的办赛成果</a></h3>
+										<p>Our Programme</p>
 									</header>
 								</article>
 								<article>
@@ -136,7 +145,6 @@
 										<h3><a href="https://qm.qq.com/q/Gj8GilkHAI" class="link">广纳贤才</a></h3>
 										<p>Join us</p>
 									</header>
-								</article>
 							</section>
 
 						<!-- Two -->
@@ -156,8 +164,6 @@
 								</div>
 							</section>
 
-					</div>
-
 				<!-- Contact -->
 					<footer id="footer">
 						<div class="inner">
@@ -166,8 +172,6 @@
 							</ul>
 						</div>
 					</footer>
-
-			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
